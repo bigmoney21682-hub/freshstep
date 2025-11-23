@@ -1,12 +1,13 @@
-/* Reset */
+/* === RESET === */
 * { margin: 0; padding: 0; box-sizing: border-box; }
+
 body {
   font-family: 'Poppins', sans-serif;
   background: #F8FAFC;
   color: #111827;
 }
 
-/* HEADER */
+/* === HEADER === */
 header {
   display: flex;
   justify-content: space-between;
@@ -30,7 +31,7 @@ nav a:hover { color: #00E0A8; }
 
 .logo { height: 60px; }
 
-/* HERO */
+/* === HERO === */
 .hero {
   text-align: center;
   padding: 120px 10%;
@@ -64,7 +65,7 @@ nav a:hover { color: #00E0A8; }
   color: #111827;
 }
 
-/* SECTIONS */
+/* === SECTIONS === */
 .section {
   padding: 80px 10%;
   text-align: center;
@@ -87,7 +88,7 @@ nav a:hover { color: #00E0A8; }
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* GALLERY */
+/* === GALLERY === */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -99,7 +100,7 @@ nav a:hover { color: #00E0A8; }
   border-radius: 12px;
 }
 
-/* PRICING */
+/* === PRICING === */
 .pricing-table {
   margin: 40px auto;
   width: 70%;
@@ -108,7 +109,7 @@ nav a:hover { color: #00E0A8; }
 }
 .pricing-table td { padding: 15px; border-bottom: 1px solid #ddd; }
 
-/* FOOTER */
+/* === FOOTER === */
 footer {
   text-align: center;
   padding: 30px;
@@ -116,3 +117,114 @@ footer {
   color: #fff;
 }
 
+/* === PAYMENT SECTION === */
+#payment {
+  padding: 80px 10%;
+  text-align: center;
+  background-color: #fefefe;
+}
+
+#payment h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+#payment p {
+  font-size: 1rem;
+  margin-bottom: 50px;
+  color: #4B5563;
+}
+
+/* Payment Cards Container */
+.payment-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Individual Card */
+.payment-card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 16px;
+  width: 280px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s, transform 0.6s;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.payment-card.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover Effect */
+.payment-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* Card Icon */
+.payment-card .icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+/* Card Title */
+.payment-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+/* Card Description */
+.payment-card p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #4B5563;
+}
+
+/* Call-to-Action Buttons */
+.payment-card .cta {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #111827;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.payment-card .cta:hover {
+  background: #00E0A8;
+  color: #111827;
+}
+
+/* Responsive Payment Cards */
+@media screen and (max-width: 1024px) {
+  .payment-card {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .payment-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .payment-card {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .payment-card {
+    width: 90%;
+  }
+}

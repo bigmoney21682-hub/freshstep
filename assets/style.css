@@ -73,6 +73,7 @@ nav a:hover { color: #00E0A8; }
 .cards {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap; /* allows cards to wrap on smaller screens */
   gap: 30px;
   margin-top: 40px;
 }
@@ -81,7 +82,8 @@ nav a:hover { color: #00E0A8; }
   background: white;
   padding: 30px;
   border-radius: 12px;
-  width: 250px;
+  width: 100%;          /* allow card to shrink */
+  max-width: 250px;     /* cap width for desktop */
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
@@ -113,3 +115,4 @@ footer {
   background: #111827;
   color: #fff;
 }
+

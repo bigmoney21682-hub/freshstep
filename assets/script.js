@@ -17,23 +17,20 @@ const modal = document.getElementById("paymentModal");
 const closeBtn = document.querySelector(".close");
 const payButtons = document.querySelectorAll(".pay-btn");
 
+// Show modal
 payButtons.forEach(btn => {
-  btn.addEventListener("click", () => {
+  btn.addEventListener("click", e => {
+    e.preventDefault();   // prevent opening link
     modal.style.display = "flex";
   });
 });
 
+// Close modal when X clicked
 closeBtn.addEventListener("click", () => {
   modal.style.display = "none";
 });
 
+// Close when clicking outside
 window.addEventListener("click", e => {
   if (e.target === modal) modal.style.display = "none";
 });
-
-// Optional: future booking popups / chatbot integration
-// Example: auto alert after 10s
-// setTimeout(() => {
-//   alert("Luxury sneaker care! Click Book Now to schedule.");
-// }, 10000);
-

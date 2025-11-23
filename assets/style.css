@@ -31,6 +31,17 @@ nav a:hover { color: #00E0A8; }
 .logo { height: 60px; }
 
 /* HERO */
+.services {
+  max-width: 100%;
+  padding: 20px;
+  box-sizing: border-box; /* ensures padding doesn’t cause overflow */
+  overflow-x: auto; /* allows horizontal scroll if necessary */
+}
+
+.services h3 {
+  white-space: nowrap; /* keeps headings on one line */
+}
+
 .hero {
   text-align: center;
   padding: 120px 10%;
@@ -113,3 +124,4 @@ footer {
   background: #111827;
   color: #fff;
 }
+

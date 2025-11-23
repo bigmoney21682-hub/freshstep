@@ -1,12 +1,12 @@
-
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f9f9f9;
-  color: #111;
+  font-family: 'Poppins', sans-serif;
+  background: #F8FAFC;
+  color: #111827;
 }
 
-/* Header */
+/* HEADER */
 header {
   display: flex;
   justify-content: space-between;
@@ -22,44 +22,49 @@ header {
 nav a {
   margin-left: 20px;
   text-decoration: none;
-  color: #333;
+  color: #111827;
   font-weight: 600;
+  transition: color 0.3s;
 }
+nav a:hover { color: #00E0A8; }
 
-.logo {
-  height: 45px;
-}
+.logo { height: 60px; }
 
-/* Hero */
+/* HERO */
 .hero {
   text-align: center;
   padding: 120px 10%;
   background: white;
 }
 
-.hero h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
-}
+.hero h1 { font-size: 48px; margin-bottom: 10px; font-weight: 700; }
+.hero p { font-size: 20px; margin-bottom: 20px; color: #4B5563; }
 
 .cta {
   display: inline-block;
-  padding: 12px 24px;
-  background: black;
-  color: white;
-  font-weight: bold;
+  padding: 12px 28px;
+  background: #111827;
+  color: #fff;
+  font-weight: 600;
   border-radius: 6px;
   text-decoration: none;
   margin-top: 20px;
+  transition: background 0.3s;
 }
+.cta:hover { background: #00E0A8; color: #111827; }
 
 .cta.outline {
   background: transparent;
-  border: 2px solid black;
-  color: black;
+  border: 2px solid #111827;
+  color: #111827;
+}
+.cta.outline:hover {
+  background: #00E0A8;
+  border-color: #00E0A8;
+  color: #111827;
 }
 
-/* Sections */
+/* SECTIONS */
 .section {
   padding: 80px 10%;
   text-align: center;
@@ -77,39 +82,34 @@ nav a {
   padding: 30px;
   border-radius: 12px;
   width: 250px;
-  box-shadow: 0 4px 10px #00000010;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Gallery */
+/* GALLERY */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   margin-top: 40px;
 }
-
 .gallery-grid img {
   width: 100%;
   border-radius: 12px;
 }
 
-/* Pricing */
+/* PRICING */
 .pricing-table {
   margin: 40px auto;
   width: 70%;
   font-size: 20px;
   border-collapse: collapse;
 }
+.pricing-table td { padding: 15px; border-bottom: 1px solid #ddd; }
 
-.pricing-table td {
-  padding: 15px;
-  border-bottom: 1px solid #ddd;
-}
-
-/* Footer */
+/* FOOTER */
 footer {
   text-align: center;
   padding: 30px;
-  background: #111;
-  color: white;
+  background: #111827;
+  color: #fff;
 }

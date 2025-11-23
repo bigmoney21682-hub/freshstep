@@ -1,5 +1,3 @@
-
-
 // FreshStep Luxe - site scripts
 console.log("FreshStep Luxe site loaded.");
 
@@ -19,4 +17,3 @@ document.querySelectorAll('nav a[href^="#"]').forEach(link => {
 // setTimeout(() => {
 //   alert("Luxury sneaker care! Click Book Now to schedule.");
 // }, 10000);
-
